@@ -60,8 +60,23 @@ setup(
         "openvino",
         "openvino-genai",
         "openvino-tokenizers",
-        "optimum", 
+        "optimum",
         "optimum-intel",
     ],
     python_requires=">=3.9"
+)
+
+setup(
+    name="whisper-live-gui",
+    version="0.1.0",
+    description="GUI client for WhisperLive transcription",
+    py_modules=["whisper_live_gui"],
+    install_requires=[
+        "whisper-live",
+        "pyaudio",
+        "av",
+        "scipy",
+        "websocket-client",
+        "pyinstaller",
+    ],
 )
